@@ -1,0 +1,6 @@
+<svg id="main" pointer-events="visible">
+	<rect id="background" fill="black" />
+	<text id="label" />
+	<circle id="ball" cx="100" cy="200" r="10" fill="white" />
+	<rect id="block" x="250" y="210" height="40" width="25" fill="white" />
+</svg>

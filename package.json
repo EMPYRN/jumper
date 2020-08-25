@@ -1,0 +1,30 @@
+{
+	"name": "jumper",
+	"version": "0.1.0",
+	"private": true,
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"@fitbit/sdk": "~4.1.0",
+		"@fitbit/sdk-cli": "^1.7.2"
+	},
+	"fitbit": {
+		"appUUID": "239f0247-e2d0-48a9-add9-3ceea49d8960",
+		"appType": "clockface",
+		"appDisplayName": "Jumper",
+		"iconFile": "resources/icon.png",
+		"wipeColor": "#ffffff",
+		"requestedPermissions": [],
+		"buildTargets": [
+			"higgs",
+			"meson",
+			"gemini",
+			"mira"
+		],
+		"i18n": {},
+		"defaultLanguage": "en-US"
+	},
+	"scripts": {
+		"build": "fitbit-build",
+		"debug": "fitbit"
+	}
+}
