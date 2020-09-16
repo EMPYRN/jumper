@@ -1,12 +1,111 @@
-.defaultText {
-  font-size: 32;
-  font-family: System-Regular;
-  font-weight: regular;
-  text-length: 32;
+/* general */
+*
+{
+	font-family: "Tungsten";
+	font-size: 28;
+	fill: #FFFFFF;
 }
 
-#background {
-  width: 100%;
-  height: 100%;
-  fill: white;
+#background
+{
+	width: 100%;
+	height: 100%;
+
+	fill: #000000;
+}
+
+.icon
+{
+	y: 4;
+	height: 28;
+	width: 28;
+
+	fill: #FFFFFF;
+}
+
+#battery-icon
+{
+	x: 11;
+	y: 5;
+}
+
+#stat-icon
+{
+	x: 263;
+}
+
+#stat-text
+{
+	x: 250;
+	y: 28;
+
+	text-align: right;
+	text-anchor: "end";
+}
+
+/* clock */
+#clock
+{
+	x: 50%-3;
+	y: 50%+50;
+
+	opacity: 0.9;
+
+	font-size: 192;
+	text-anchor: "middle";
+	text-length: 20;
+}
+
+/* the game container */
+.game
+{
+
+}
+
+/* player */
+.player
+{
+	fill: #FFFFFF;
+}
+
+/* obstacles */
+.block
+{
+	fill: #FFFFFF;
+}
+
+/* game platforms */
+.platform
+{
+	x: 0;
+
+	width: 100%;
+}
+
+.platform.high
+{
+	y: 245;
+	height: 10;
+
+	fill: #505050;
+}
+
+.platform.low
+{
+	y: 255;
+	height: 60;
+
+	fill: #505050;
+}
+
+#score
+{
+	x: 50%;
+	y: 100%-10;
+
+	font-size: 36;
+	text-length: 12;
+	text-anchor: "middle";
+
+	fill: white;
 }

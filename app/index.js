@@ -1,70 +1,18 @@
-import clock from "clock"
-import document from "document"
+import * as jumperClock from "./jumper-clock";
+import * as jumperGame from "./jumper-game";
+import * as jumperSettings from "./jumper-settings";
 
-clock.granularity = "minutes";
+/**** BEGIN KPAY IMPORTS ****/
+import * as kpay from './kpay/release/kpay.js';
+import * as kpay_common from '../common/kpay/kpay_common.js';
+import './kpay/release/kpay_filetransfer.js';
+import './kpay/release/kpay_dialogs.js';
+import './kpay/release/kpay_time_trial.js';
+/**** END KPAY IMPORTS ****/
 
-let label = document.getElementById("label");
-let mainSVG = document.getElementById("main");
-let ball = document.getElementById("ball");
-let block = document.getElementById("block");
+/** Initialize */
 
-//clock.ontick = () => updateClock();
-mainSVG.onclick = () => updateClock();
-requestAnimationFrame(gravity);
-
-let ground = 240;
-let jumpHeight = 75;
-let jumped = false;
-let falling = true;
-
-function updateClock()
-{
-	// let today = new Date();
-	// let hours = today.getHours();
-	// let mins = today.getMinutes();
-
-	if (ball.cy >= ground && !jumped && !falling)
-	{
-		jumped = true;
-	}
-}
-
-function gravity()
-{
-	let dy = (150 / ((ground - ball.cy) + 5));
-
-	if (jumped && !falling)
-	{
-		console.log(dy);
-		ball.cy -= dy; // jump
-
-		if (ball.cy <= ground - jumpHeight)
-		{
-			falling = true;
-		}
-	}
-
-	if (ball.cy <= ground && falling)
-	{
-		jumped = false;
-		falling = true;
-		ball.cy += dy; // fall
-	}
-
-	if (ball.cy >= ground)
-	{
-		falling = false;
-		ball.cy = ground;
-	}
-
-	if (block.x < 0)
-	{
-		block.x = 350;
-	}
-	else
-	{
-		block.x -= 3;
-	}
-
-	requestAnimationFrame(gravity);
-}
+jumperSettings;
+jumperClock;
+jumperGame;
+kpay.initialize();

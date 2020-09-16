@@ -1,0 +1,23 @@
+msgid "StartupMsg"
+msgstr "Cette app est payante. Après 1 heure d'essai gratuit, un paiement de $1.29 sera nécessaire pour continuer à l'utiliser."
+
+msgid "PurchaseStarted"
+msgstr "Pour continuer à utiliser Jumper, rendez-vous sur www.kzl.io/empyrn-jumper et entrez le code:"
+
+msgid "UnlockFree"
+msgstr "Si l'app vous demande de payer à nouveau, utilisez le bouton 'Already Purchased' en bas de la page d'achat pour la débloquer gratuitement."
+
+msgid "CompletePurchase"
+msgstr "Veuillez terminer l'achat sur www.kzl.io/empyrn-jumper pour débloquer Jumper"
+
+msgid "PurchaseSuccess"
+msgstr "Achat réussi!"
+
+msgid "OkBtn"
+msgstr "J'ai compris!"
+
+msgid "AlreadyPaidBtn"
+msgstr "Déjà acheté"
+
+msgid "InternetRequired"
+msgstr "Cette app a besoin de la permission 'Internet'"

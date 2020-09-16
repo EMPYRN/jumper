@@ -11,9 +11,15 @@
 		"appUUID": "239f0247-e2d0-48a9-add9-3ceea49d8960",
 		"appType": "clockface",
 		"appDisplayName": "Jumper",
+		"appClusterID": "empyrn",
+		"developerID": "a2573b74-3ab8-4d91-9ed3-cfcb9f02810d",
 		"iconFile": "resources/icon.png",
 		"wipeColor": "#ffffff",
-		"requestedPermissions": [],
+		"requestedPermissions": [
+			"access_activity",
+			"access_internet",
+			"access_app_cluster_storage"
+		],
 		"buildTargets": [
 			"higgs",
 			"meson",

@@ -1,6 +1,18 @@
 <svg id="main" pointer-events="visible">
-	<rect id="background" fill="black" />
-	<text id="label" />
-	<circle id="ball" cx="100" cy="200" r="10" fill="white" />
-	<rect id="block" x="250" y="210" height="40" width="25" fill="white" />
+	<rect id="background" />
+	<image id="battery-icon" class="icon" href="icons/battery_indc_100_48px.png" />
+	<text id="stat-text" />
+	<image id="stat-icon" class="icon" href="icons/stat_steps_solid_48px.png" />
+	<text id="clock" />
+	<svg class="game">
+		<rect id="platformHigh" class="platform high" />
+		<circle id="ball" class="player" fill="cyan" />
+		<rect id="block1" class="block" x="300" y="210" />
+		<rect id="block2" class="block" x="500" y="210" />
+		<rect id="block3" class="block" x="700" y="210" />
+		<rect id="platformLow" class="platform low" />
+		<text id="score" />
+	</svg>
+	<!--MUST be the last line-->
+	<use href="#kpay" />
 </svg>
