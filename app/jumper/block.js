@@ -1,5 +1,4 @@
 import { State } from "./state";
-import { vibration } from "haptics";
 import { me as device } from "device";
 import * as util from "./util";
 
@@ -19,7 +18,7 @@ export class Block
 		this.height = 40;
 		this.width = 20;
 		this.x = this.findNext();
-		this.y = 210;
+		this.y = device.modelName == "Ionic" ? 170 : 210;
 	}
 
 	/**

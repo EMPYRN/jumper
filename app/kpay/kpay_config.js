@@ -31,7 +31,7 @@
   
   Test purchases only, set to false before releasing or users can get your app for free!
 */
-export var KPAY_TEST_MODE = true;
+export var KPAY_TEST_MODE = false;
 
 /**
   Configure wether you want the "paid app" popup to be displayed to the user after installing this app.

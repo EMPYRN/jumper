@@ -8,7 +8,7 @@ messaging.peerSocket.addEventListener("open", event => { socketOpen(event); });
 
 function settingsChange(event)
 {
-	if (event.key === "reset" && event.newValue === "true")
+	if (event.key === "reset" && event.newValue == "true")
 	{
 		setDefaults();
 		settingsStorage.setItem("reset", "false");
@@ -29,7 +29,7 @@ function socketOpen(event)
 		let key = settingsStorage.key(i);
 		let value = settingsStorage.getItem(key);
 
-		if (value !== null)
+		if (value != null)
 		{
 			settingsStorage.setItem(key, value);
 			sendValue(key, value);
@@ -43,8 +43,11 @@ function socketOpen(event)
  */
 function socketMessage(event)
 {
-	settingsStorage.setItem("highScore", event.data.highScore);
-	settingsStorage.setItem("lifetimeScore", event.data.lifetimeScore)
+	if (event.data.highScore && event.data.lifetimeScore)
+	{
+		settingsStorage.setItem("highScore", event.data.highScore);
+		settingsStorage.setItem("lifetimeScore", event.data.lifetimeScore);
+	}
 }
 
 function setDefaults()
@@ -58,11 +61,13 @@ function setDefaults()
 	setDefaultSetting("autoPlay", { "selected": [0] });
 	setDefaultSetting("gameSpeed", 10);
 	setDefaultSetting("clockColor", "#FFFFFF");
+	setDefaultSetting("highScore", 0);
+	setDefaultSetting("lifetimeScore", 0);
 }
 
 function setDefaultSetting(key, value)
 {
-	if (settingsStorage.getItem(key) === null)
+	if (settingsStorage.getItem(key) == null)
 	{
 		settingsStorage.setItem(key, JSON.stringify(value));
 		sendValue(key, JSON.stringify(value));
@@ -71,7 +76,7 @@ function setDefaultSetting(key, value)
 
 function sendValue(key, value)
 {
-	if (value !== null)
+	if (value != null)
 	{
 		sendSettingData({
 			key: key,

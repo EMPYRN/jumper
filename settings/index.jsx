@@ -9,8 +9,8 @@ function settingsComponent(props)
 	return (
 		<Page>
 			<Section title="Jumper">
-				<Text bold>Your High Score: <Text center>{props.settings.highScore}</Text></Text>
-				<Text bold>Lifetime Total: <Text center>{props.settings.lifetimeScore}</Text></Text>
+				<Text bold>Your High Score: <Text center>{props.settingsStorage.getItem("highScore")}</Text></Text>
+				<Text bold>Lifetime Total: <Text center>{props.settingsStorage.getItem("lifetimeScore")}</Text></Text>
 			</Section>
 			<Section title="Game Settings">
 				<Text bold>Ball Color</Text>

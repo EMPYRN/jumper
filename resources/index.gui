@@ -7,9 +7,9 @@
 	<svg class="game">
 		<rect id="platformHigh" class="platform high" />
 		<circle id="ball" class="player" fill="cyan" />
-		<rect id="block1" class="block" x="300" y="210" />
-		<rect id="block2" class="block" x="500" y="210" />
-		<rect id="block3" class="block" x="700" y="210" />
+		<rect id="block1" class="block" />
+		<rect id="block2" class="block" />
+		<rect id="block3" class="block" />
 		<rect id="platformLow" class="platform low" />
 		<text id="score" />
 	</svg>

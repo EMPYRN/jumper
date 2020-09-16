@@ -31,14 +31,15 @@
 
 #stat-icon
 {
-	x: 263;
+	x: 88%;
 }
 
 #stat-text
 {
-	x: 250;
+	x: 88%-14;
 	y: 28;
 
+	text-length: 10;
 	text-align: right;
 	text-anchor: "end";
 }
@@ -84,7 +85,7 @@
 
 .platform.high
 {
-	y: 245;
+	y: 82%;
 	height: 10;
 
 	fill: #505050;
@@ -92,7 +93,7 @@
 
 .platform.low
 {
-	y: 255;
+	y: 85%;
 	height: 60;
 
 	fill: #505050;

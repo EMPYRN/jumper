@@ -1,5 +1,5 @@
 import { State } from "./state";
-import { vibration } from "haptics";
+import { me as device } from "device";
 import * as util from "./util";
 
 export class Player
@@ -14,10 +14,11 @@ export class Player
 		this.element = this.game.document.getElementById("ball");
 
 		this.cx = 50;
-		this.cy = 240;
+		this.cy = device.modelName == "Ionic" ? 200 : 240;
 		this.r = 10;
 
-		this.ground = 250 - this.r;
+		console.log(device.modelName);
+		this.ground = (device.modelName == "Ionic" ? 210 : 250) - this.r;
 		this.jumpHeight = 16;
 		this.gravity = 1.6;
 		this.speed = 0;
